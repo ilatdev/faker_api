@@ -1,9 +1,11 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Navbar from './Navbar'
 
-import Books from './Books'
-import Companies from './Companies'
-import Persons from './Persons'
+import ContainerTable from './ContainerTable'
+
+const BOOKS_URL = 'https://fakerapi.it/api/v1/books'
+const COMPANIES_URL = 'https://fakerapi.it/api/v1/companies'
+const PERSONS_URL = 'https://fakerapi.it/api/v1/persons'
 
 function App() {
   return (
@@ -11,13 +13,13 @@ function App() {
       <Navbar />
       <Switch>
         <Route path="/persons">
-          <Persons />
+          <ContainerTable url={PERSONS_URL} />
         </Route>
         <Route path="/companies">
-          <Companies />
+          <ContainerTable url={COMPANIES_URL} />
         </Route>
         <Route path="/">
-          <Books />
+          <ContainerTable url={BOOKS_URL} />
         </Route>
       </Switch>
     </Router>
