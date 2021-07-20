@@ -1,14 +1,14 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { Button, Link } from '@material-ui/core'
+import { Button } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
     padding: 10,
     wordBreak: 'break-word'
-  },
-  button: {
-    maxWidth: 'fit-content'
   }
 }))
 
@@ -35,22 +35,26 @@ function ItemTable({ props }) {
 
   if (url.test(props)) {
     return (
-      <Button
-        href={props}
-        component={Link}
-        className={cls.button}
-        target="_blank"
-        rel="noreferrer">
-        Ver
-      </Button>
+      <div className={cls.root}>
+        <Button
+          variant="contained"
+          color="primary"
+          href={props}
+          target="_blank"
+          rel="noreferrer">
+          Ver
+        </Button>
+      </div>
     )
   }
 
-  if (props.length > 40) {
+  if (props.length > 50) {
     return (
-      <Button className={cls.button} onClick={handleMoreInfo}>
-        Ver
-      </Button>
+      <div className={cls.root}>
+        <Button variant="contained" color="primary" onClick={handleMoreInfo}>
+          Ver
+        </Button>
+      </div>
     )
   }
 

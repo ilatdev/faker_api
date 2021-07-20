@@ -2,6 +2,7 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import ItemTable from './ItemTable'
 import { Paper } from '@material-ui/core'
+import CircularProgress from '@material-ui/core/CircularProgress'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -12,7 +13,6 @@ const useStyles = makeStyles((theme) => ({
     padding: '1rem 2rem'
   },
   table: {
-    maxWidth: 'max-content',
     padding: '1rem',
     backgroundColor: '#D8ECFD'
   },
@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'grid',
     gridAutoColumns: 130,
     gridAutoFlow: 'column',
-    gridGap: 20,
+    gridGap: '10px',
     textTransform: 'capitalize',
     fontWeight: 'bold',
     fontSize: 18
@@ -29,9 +29,8 @@ const useStyles = makeStyles((theme) => ({
     display: 'grid',
     gridAutoColumns: 130,
     gridAutoFlow: 'column',
-    gridGap: 20,
-    borderTop: '1px solid',
-    padding: '5px 0'
+    gridGap: '10px',
+    borderTop: '1px solid'
   }
 }))
 
@@ -41,7 +40,9 @@ export default function ViewTable({ data }) {
   if (!data) {
     return (
       <div className={cls.root}>
-        <h3>Loading . . .</h3>
+        <div>
+          <CircularProgress size={100} disableShrink />
+        </div>
       </div>
     )
   }
