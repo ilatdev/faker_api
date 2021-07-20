@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
     marginTop: '2rem',
-    padding: '2rem 2rem'
+    padding: '1rem 2rem'
   },
   table: {
     maxWidth: 'max-content',

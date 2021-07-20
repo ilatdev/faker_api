@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Navbar from './Navbar'
 
 import Books from './Books'
+import Companies from './Companies'
+import Persons from './Persons'
 
 function App() {
   return (
@@ -9,14 +11,10 @@ function App() {
       <Navbar />
       <Switch>
         <Route path="/persons">
-          <div>
-            <h1>Persons</h1>
-          </div>
+          <Persons />
         </Route>
         <Route path="/companies">
-          <div>
-            <h1>Companies</h1>
-          </div>
+          <Companies />
         </Route>
         <Route path="/">
           <Books />

@@ -15,14 +15,17 @@ const useStyles = makeStyles((theme) => ({
 const url =
   /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9@:%_+.~#?&//=]*)/
 
+// if objects array take 1st object and return 1st key value
+// if object return 1st key value
+// if string return string
+
 function ItemTable({ props }) {
   const cls = useStyles()
 
   const handleMoreInfo = () => {
     return alert(props)
   }
-  // if is an array of objects take 1st object and return 1st key's value
-  // if is an string return string
+
   if (typeof props === 'object') {
     if (props.length) {
       return <div className={cls.root}>{Object.values(props[0])[0]}</div>
@@ -43,7 +46,7 @@ function ItemTable({ props }) {
     )
   }
 
-  if (props.length > 30) {
+  if (props.length > 40) {
     return (
       <Button className={cls.button} onClick={handleMoreInfo}>
         Ver

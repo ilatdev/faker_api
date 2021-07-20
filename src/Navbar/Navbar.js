@@ -10,36 +10,37 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1
   },
   title: {
-    color: '#fff'
+    color: '#fff',
+    marginRight: '1rem'
   }
 }))
 
 export default function Navbar() {
-  const classes = useStyles()
+  const cls = useStyles()
 
   return (
-    <div className={classes.root}>
+    <div className={cls.root}>
       <AppBar position="static">
-        <Toolbar>
+        <Toolbar className={cls.toolbar}>
           <Typography
             component={Link}
             to="/"
             variant="h6"
-            className={classes.title}>
+            className={cls.title}>
             Books
           </Typography>
           <Typography
             component={Link}
             to="/persons"
             variant="h6"
-            className={classes.title}>
+            className={cls.title}>
             Persons
           </Typography>
           <Typography
             component={Link}
             to="/companies"
             variant="h6"
-            className={classes.title}>
+            className={cls.title}>
             Companies
           </Typography>
         </Toolbar>
