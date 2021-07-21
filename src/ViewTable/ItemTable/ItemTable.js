@@ -8,7 +8,8 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 10,
-    wordBreak: 'break-word'
+    wordBreak: 'break-word',
+    textAlign: 'center'
   }
 }))
 

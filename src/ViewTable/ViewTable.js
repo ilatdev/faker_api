@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   },
   refRow: {
     display: 'grid',
-    gridAutoColumns: 130,
+    gridAutoColumns: 120,
     gridAutoFlow: 'column',
     gridGap: '10px',
     textTransform: 'capitalize',
@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   },
   valueRow: {
     display: 'grid',
-    gridAutoColumns: 130,
+    gridAutoColumns: 120,
     gridAutoFlow: 'column',
     gridGap: '10px',
     borderTop: '1px solid'
