@@ -3,9 +3,9 @@ import Navbar from './Navbar'
 
 import ContainerTable from './ContainerTable'
 
-const BOOKS_URL = 'https://fakerapi.it/api/v1/books'
-const COMPANIES_URL = 'https://fakerapi.it/api/v1/companies'
-const PERSONS_URL = 'https://fakerapi.it/api/v1/persons'
+const BOOKS_URL = 'https://fakerapi.it/api/v1/books?_quantity=50'
+const COMPANIES_URL = 'https://fakerapi.it/api/v1/companies?_quantity=50'
+const PERSONS_URL = 'https://fakerapi.it/api/v1/persons?_quantity=50'
 
 function App() {
   return (
