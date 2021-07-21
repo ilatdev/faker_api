@@ -1,25 +1,25 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Navbar from './Navbar'
 
+import ContainerTable from './ContainerTable'
+
+const BOOKS_URL = 'https://fakerapi.it/api/v1/books'
+const COMPANIES_URL = 'https://fakerapi.it/api/v1/companies'
+const PERSONS_URL = 'https://fakerapi.it/api/v1/persons'
+
 function App() {
   return (
     <Router>
       <Navbar />
       <Switch>
         <Route path="/persons">
-          <div>
-            <h1>Persons</h1>
-          </div>
+          <ContainerTable url={PERSONS_URL} />
         </Route>
         <Route path="/companies">
-          <div>
-            <h1>Companies</h1>
-          </div>
+          <ContainerTable url={COMPANIES_URL} />
         </Route>
         <Route path="/">
-          <div>
-            <h1>Books</h1>
-          </div>
+          <ContainerTable url={BOOKS_URL} />
         </Route>
       </Switch>
     </Router>
