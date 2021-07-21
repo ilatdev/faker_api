@@ -7,9 +7,13 @@ export default function ContainerTable({ url }) {
 
   useEffect(() => {
     const getData = axios.get(url)
-    getData.then((response) => {
-      setState(response.data.data)
-    })
+    getData
+      .then((response) => {
+        setState(response.data.data)
+      })
+      .catch((err) => {
+        throw new Error(err.message)
+      })
   }, [url])
 
   return <ViewTable data={state} />
