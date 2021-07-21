@@ -32,10 +32,10 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-export default function ViewTable({ data }) {
+export default function ViewTable({ data, loading }) {
   const cls = useStyles()
 
-  if (!data) {
+  if (loading) {
     return (
       <div className={cls.root}>
         <div>
